@@ -33,7 +33,7 @@ module LetterAvatar
 
       def generate(username, size, opts = nil)
         identity = Identity.from_username(username)
-
+        identity.letter = username
         cache = true
         cache = false if opts && opts[:cache] == false
 
