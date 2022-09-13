@@ -64,7 +64,7 @@ module LetterAvatar
 
       def generate_fullsize(identity)
         filename = fullsize_path(identity)
-        pointsize = filename.match(/^[A-Za-z0-9]+$/) ? (LetterAvatar.pointsize + 150) : LetterAvatar.pointsize
+        pointsize = filename.match(/^[A-Za-z0-9]+$/) ? 350 : LetterAvatar.pointsize
         LetterAvatar.execute(
           %W(
             convert
